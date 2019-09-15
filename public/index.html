@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vọc cùng Thành #11 - Realtime API trong 5 phút với FeathersJS</title>
+    <meta
+      name="description"
+      content="Vọc cùng Thành #11 - Realtime API trong 5 phút với FeathersJS"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <intro></intro>
+      <div v-if="auth">
+        <welcome :user="auth.user" @logout="logout"></welcome>
+        <user-list></user-list>
+      </div>
+      <user-form v-else="!auth" @login="login"></user-form>
+    </div>
+
+    <!-- supporting libs -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="//unpkg.com/@feathersjs/client@^4.3.0/dist/feathers.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+    <!-- main js -->
+    <script src="components/intro.js"></script>
+    <script src="components/user-form.js"></script>
+    <script src="components/welcome.js"></script>
+    <script src="components/user-list.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
