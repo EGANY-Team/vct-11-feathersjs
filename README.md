@@ -39,4 +39,4 @@ npm start
 [fjs]: https://feathersjs.com
 [git]: https://git-scm.com
 [node]: https://nodejs.org
-[demo]: https://vct-10.thanhnguyen.now.sh/
+[demo]: https://vct-11.herokuapp.com/
